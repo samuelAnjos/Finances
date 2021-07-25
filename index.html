@@ -1,4 +1,4 @@
-<!-- Só uma !(exclamação) -->
+<!-- Just an !(exclamation) -->
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -7,45 +7,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Finances</title>
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <!-- 
-        <header></header> serve para semâtica
+        <header></header> -the three- serves to give semantics to html
         <main></main>
         <footer></footer>
     -->
     <header>
-        <h1>Finances</h1>
+        <h1 id="logo">Finança$</h1>
     </header>
     <main>
-        <!-- For organizer ainda mais SECTION em 
-        balanço e em transãções pois são dois topicos relevantes-->
-        <section>
+        <!--to organize even more section in
+         balance sheet and transactions as they are two relevant topics -->
+        <section id="balance">
             <h2>Balanço</h2>
-             <div> <!--Type conteiner, box "too usually"-->
+            <div class="card">
+                <!--Type conteiner, box "too usually"-->
                 <h3>Entradas</h3>
                 <p>R$ 5.000,00</p>
-             </div>
-            <div>
+            </div>
+            <divc class="card">
                 <h3>Saídas</h3>
                 <p>R& 2.000,00</p>
-            </div>
-            <div>
-                <h3>Total</h3>
-                <p>R$ 3.000,00</p>
-            </div>
+                </div>
+                <div class="card">
+                    <h3>Total</h3>
+                    <p>R$ 3.000,00</p>
+                </div>
 
         </section>
-        <section>
+        <section id="transaction">
             <h2>Transações</h2>
 
         </section>
 
-
-
-        <!-- cria table-->
-        <table>
+        <!-- create table-->
+        <table id="data-table">
             <thead>
                 <!-- line of table-->
                 <tr>
@@ -79,8 +85,6 @@
     <footer>
         <p>dev.Finance$</p>
     </footer>
-
-
 
 </body>
 

@@ -1,0 +1,27 @@
+/* Global ====*/
+/*to reset initially*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*to count from the edge of the content*/
+}
+
+body{
+    background: #f0f2f5;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Header ====*/
+header {
+    background: #3b662c;
+    padding: 2rem 0 9rem;
+    text-align: center;
+}
+
+/*id I get like this #nome*/
+#logo{
+    color: #fff;
+    font-weight: 120;
+}
+
+/* balance ====*/
