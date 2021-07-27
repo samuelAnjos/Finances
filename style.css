@@ -26,9 +26,37 @@ h2 {
    font-weight: normal; 
 }
 
+/*links and buttons ======*/
+a{
+    color: #49AA26;
+    text-decoration: none;
+}
+/* It is used when hovering over mouse to change color*/
+a:hover{
+    color: #3dd705;
+}
+
+.button.new {
+    display: inline-block; /* only the size the link, "text"*/
+    margin-bottom: .8rem    ;
+}
+/* ctr k ctr c */
+
 body{
     background: #f0f2f5;
     font-family: 'Poppins', sans-serif;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border-width: 0; 
 }
 
 /* Header ====*/
@@ -68,6 +96,9 @@ header {
     font-weight: normal;
     font-size: 1rem;
 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 .card p{
     font-size: 2rem;
