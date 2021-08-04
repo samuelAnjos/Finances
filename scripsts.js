@@ -41,14 +41,37 @@ const transactions = [ //array de obj
 ]
 
 const transaction = {
+
+     all: transactions,
      incomes(){
-         //somar as entradas
+         let income = 0;
+         //get all transaction
+         //for each transactio
+         transaction.all.forEach(transaction => {
+             // if transection bigger zero
+             if(transaction.amount > 0){
+                // plus the variable and return it
+                income += transaction.amount;
+             }
+         })
+         return income;
      },
      expenses(){
-         //somar as saidas
-     },
+       
+            let expense = 0;
+            //get all transaction
+            //for each transactio
+            transaction.all.forEach(transaction => {
+                // if transection bigger zero
+                if(transaction.amount < 0){
+                   // plus the variable and return it
+                   expense += transaction.amount;
+                }
+            })
+            return expense;
+        },
      total(){
-         
+        return transaction.incomes() + transaction.expenses();
     }
 }
 
@@ -76,6 +99,17 @@ const DOM = {
             </td>
         `
         return html
+    },
+
+    updateBalance(){
+        document.getElementById('incomeDisplay')
+        .innerHTML = Utils.formatCurrency(transaction.incomes())
+
+        document.getElementById('expenseDisplay')
+        .innerHTML = Utils.formatCurrency(transaction.expenses())
+
+        document.getElementById('totalDisplay')
+        .innerHTML = Utils.formatCurrency(transaction.total())
     }
 }
 
@@ -96,6 +130,25 @@ const Utils = {
     }
 }
 
-transactions.forEach(function(transaction){
-    DOM.addTransaction(transaction)
-})
+const app = {
+    init(){
+
+        transaction.all.forEach(function(transaction){
+            DOM.addTransaction(transaction)
+        })
+        
+        DOM.updateBalance()
+        
+        transaction.add({
+            id: 5,
+            description='Olá',
+            amount: 200,
+            date: '23/03/2021'
+        })
+
+    },
+    reload(){
+
+    },
+}
+
