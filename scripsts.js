@@ -15,30 +15,32 @@ const Modal = { // obj
     }
 }
 
-const transactions = [ //array de obj
+const transactions = { //array de obj
 
      //When we work with money we put 2 zeros. Ex: 200 -> 20000
-    {
-        id=1,
-        description='Luz',
-        amount: -50000, 
-        date: '23/07/2021',
-    },
+    all: Storage.get(),
+//:[  {
+//         id=1,
+//         description='Luz',
+//         amount: -50000, 
+//         date: '23/07/2021',
+//     },
 
-    {
-        id=2,
-        description='WebSite',
-        amount: -500000,
-        date: '23/07/2021',
-    },
+//     {
+//         id=2,
+//         description='WebSite',
+//         amount: -500000,
+//         date: '23/07/2021',
+//     },
 
-    {
-        id=3,
-        description='Internet',
-        amount: -20000,
-        date: '23/07/2021',
-    },
-]
+//     {
+//         id=3,
+//         description='Internet',
+//         amount: -20000,
+//         date: '23/07/2021',
+//     }
+//   ],
+}
 
 const transaction = {
 
@@ -225,6 +227,16 @@ const Form = {
     }
 }
 
+const Storage = {
+    get(){
+        return JSON.parse(localStorage.getItem("finances:transactions")) || []
+    },
+
+    set(transaction){
+        localStorage.setItem("finances:transactions", JSON.stringify(transactions))
+    }
+}
+
 const app = {
     init(){
 
@@ -234,7 +246,7 @@ const app = {
         
         DOM.updateBalance()
         
-        
+        Storage.set(transactions.all)
 
     },
     reload(){
