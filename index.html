@@ -38,7 +38,7 @@
                     </span>
                     <img src="./image/income.svg" alt="Imagem de entrada">
                 </h3>
-                <p id="incomeDisplay">R$ 5.000,00</p>
+                <p id="incomeDisplay">R$ 0,00</p>
             </div>
             <div class="card">
                 <h3>
@@ -47,7 +47,7 @@
                     </span>
                     <img src="./image/expense.svg" alt="Imagem de saídas">
                 </h3>
-                <p id="expenseDisplay">R$ -1.000,00</p>
+                <p id="expenseDisplay">R$ 0,00</p>
             </div>
             <div class="card total">
                 <h3>
@@ -56,7 +56,7 @@
                     </span>
                     <img src="./image/total.svg" alt="Imagem de total">
                 </h3>
-                <p id="totalDisplay">R$ 3.000,00</p>
+                <p id="totalDisplay">R$ 0,00</p>
             </div>
         </section>
 
@@ -78,7 +78,7 @@
                 </tr>
             </thead>
 
-            <tbody> <!--Who puts the data hera now is JavaScript  -->
+            <tbody> <!--Who puts the data here now is JavaScript  -->
           
             </tbody>
         </table>
@@ -89,7 +89,7 @@
             <!--form here-->
             <div id="form">
                 <h2>Nova Trasação</h2>
-                <form action="">
+                <form action="" onsubmit="Form.submit(event)">
                     <div class="input-group">
                         <label class="sr-only" for="description">Descrição</label>
                         <input type="text" id="description" name="description" placeholder="Descrição" />
