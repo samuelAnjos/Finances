@@ -21,7 +21,7 @@ This project was made to do financial control, where it is possible to add value
 * CSS
 * JAVASCRIPT
 
-Developed by 
+Developed by Samuel
 
 
 
